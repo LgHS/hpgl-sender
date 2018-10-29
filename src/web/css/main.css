@@ -1,0 +1,74 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    padding: 1rem;
+}
+
+input:not([type="file"]),
+select,
+textarea {
+    width: 100%;
+}
+
+h1.title {
+    width: 100%;
+}
+
+.app {
+    display: flex;
+    height: 100%;
+}
+
+.controls,
+.rendering {
+    padding: 1rem;
+}
+
+.controls {
+    background-color: #efefef;
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.rendering {
+    align-items: center;
+    background-color: dimgray;
+    display: flex;
+    flex-basis: 70%;
+    justify-content: center;
+}
+
+#canvas {
+    background-color: #fff;
+    border: solid #eee 10px;
+}
+
+.banner {
+    min-width: 100px;
+}
+
+.banner ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#socket-state {
+    font-style: italic;
+}
+
+#navigation .active {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pane.hidden {
+    display: none;
+}
+
+#hpgl-folder-files {
+    height: 200px;
+}

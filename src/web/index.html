@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>P L O T</title>
+
+    <link rel="stylesheet" href="css/reboot.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<main class="app">
+    <!--<div class="banner">-->
+        <!--<nav id="navigation">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<a href="#" data-target="pane-hpgl">HPGL</a>-->
+                <!--</li>-->
+                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="#" data-target="pane-picture">Picture</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+            <!--</ul>-->
+        <!--</nav>-->
+    <!--</div>-->
+    <div class="controls">
+
+        <h1 class="title">
+            P L O T
+        </h1>
+        <p id="socket-state">
+            Not connected
+        </p>
+        <div class="pane" id="pane-hpgl">
+            <section class="hpgl-upload">
+                <p>
+                    <input id="hpgl-upload-input" type="file">
+                </p>
+                <p>
+                    <button id="hpgl-upload-print">Print</button>
+                    <button id="hpgl-upload-cancel">Cancel print</button>
+                </p>
+            </section>
+
+            <hr>
+
+            <form action="#" class="hpgl-form" id="hpgl-form">
+                <label for="hpgl-input">Send HPGL :</label>
+                <input id="hpgl-input">
+                <button type="submit">Send</button>
+            </form>
+
+            <hr>
+
+            <section class="hpgl-folder">
+                <p>
+                <form action="" id="hpgl-folder-form">
+                    <label>
+                        Folder to scan on server :
+                        <input id="hpgl-folder-input">
+                    </label>
+                    <button type="submit">Scan</button>
+                </form>
+                </p>
+                <p>
+                    <label for="hpgl-folder-files">Files : </label>
+                </p>
+                <p>
+                    <select id="hpgl-folder-files" multiple>
+                        <option disabled>Choose a folder and hit "scan"</option>
+                    </select>
+                </p>
+                <p>
+                    <button id="hpgl-folder-preview">Preview</button>
+                    <button id="hpgl-folder-print">Print</button>
+                </p>
+            </section>
+        </div>
+
+        <!--<div class="pane" id="pane-picture">-->
+        <!--<section class="filters">-->
+        <!--<button>First filter</button>-->
+        <!--<button>Second filter</button>-->
+        <!--</section>-->
+
+        <!--<hr>-->
+
+        <!--<button>Send to machine</button>-->
+
+        <!--<hr>-->
+        <!--</div>-->
+    </div>
+    <div class="rendering">
+        <canvas id="canvas"></canvas>
+    </div>
+</main>
+
+<script type="text/javascript" src="js/navigation.js"></script>
+<script type="text/javascript" src="js/communication.js"></script>
+<script type="text/javascript" src="js/HpglViewer.js"></script>
+<script type="text/javascript" src="js/HpglSender.js"></script>
+<script type="text/javascript" src="js/imageUpload.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "plot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.6.5",
+    "p5": "^0.5.16",
+    "serialport": "^6.0.4",
+    "serve-static": "^1.13.1",
+    "socket.io": "^2.0.4"
+  }
+}
