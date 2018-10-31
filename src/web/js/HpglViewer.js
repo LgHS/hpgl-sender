@@ -4,7 +4,7 @@ HpglViewer = function(options) {
   }
 
   if(!options.layerColors) {
-    options.layerColors = ["black", "red", "blue", "green", "yellow", "pink", "orange", "turquoise"];
+    options.layerColors = ["black", "red", "blue", "green", "yellow", "pink", "orange", "purple"];
   }
 
   var canvas = document.getElementById(options.container),
@@ -100,12 +100,7 @@ HpglViewer = function(options) {
       } else if(cmd.match(/^SP/)) {
         // PEN SELECT
         var layerNumber = parseInt(cmd.replace("SP", "")) - 1;
-        if(layerNumber > 0) {
-          currentColor = options.layerColors[layerNumber];
-        } else {
-          // SP0;
-          currentColor = null;
-        }
+        currentColor = options.layerColors[layerNumber];
         ctx.strokeStyle = currentColor;
       } else if(cmd.match(/^IN/)) {
         // Do nothing
