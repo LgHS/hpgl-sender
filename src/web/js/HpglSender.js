@@ -24,11 +24,14 @@ HpglSender = function (socket, hpglViewer) {
     hpglViewer.draw(hpglMsg);
   });
 
+  fileInput.addEventListener("click", function (e) {
+    fileInput.value = "";
+  });
+
   fileInput.addEventListener("change", function (e) {
     e.preventDefault();
     var file = fileInput.files[0];
     if (!file) {
-      alert('Select a file');
       return;
     }
     var fileReader = new FileReader();
