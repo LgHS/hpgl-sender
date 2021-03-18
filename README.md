@@ -13,7 +13,7 @@ Send HPGL code on our Roland DXY plotters through a web interface.
 
 ### Clone repository
 
-`git clone git@github.com:LgHS/hpgl-sender.git`
+`git clone https://github.com/LgHS/hpgl-sender.git
 
 ## Run server
 
